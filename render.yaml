@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: rpg-medieval-gemini
+    runtime: node
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: GEMINI_API_KEY
+        sync: false
+    buildCommand: yarn --frozen-lockfile || yarn && yarn build
+    startCommand: yarn start
+    autoDeploy: true
+    healthCheckPath: /
+    rootDir: .
