@@ -1,0 +1,5 @@
+{
+  "name": "RPG Medieval Gemini",
+  "description": "Um RPG medieval interativo baseado em texto, potencializado pelo Gemini. Embarque em uma jornada onde suas escolhas moldam a história, gerencie as estatísticas do seu personagem e explore um mundo gerado dinamicamente por IA.",
+  "requestFramePermissions": []
+}
