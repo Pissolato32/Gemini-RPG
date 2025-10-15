@@ -1,0 +1,14 @@
+services:
+  - type: static
+    name: rpg-medieval-gemini
+    env: static
+    buildCommand: yarn --frozen-lockfile && yarn build
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /assets/**
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
